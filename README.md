@@ -9,8 +9,9 @@
 - [5. Consideraciones técnicas](#5-consideraciones-técnicas)
 - [6. Criterios mínimos de aceptación del proyecto](#6-criterios-mínimos-de-aceptación-del-proyecto)
 - [7. Despliegue](#7-despliegue)
-- [8. Consideraciones para pedir tu Project Feedback](#8-consideraciones-para-pedir-tu-project-feedback)
-- [9. Pistas, tips y lecturas complementarias](#9-pistas-tips-y-lecturas-complementarias)
+- [8. Planificación](#8-Planificación)
+- [9. Consideraciones para pedir tu Project Feedback](#9-consideraciones-para-pedir-tu-project-feedback)
+- [10. Pistas, tips y lecturas complementarias](#10-pistas-tips-y-lecturas-complementarias)
 
 ---
 
@@ -247,13 +248,6 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Introduction to components and templates - Documentación oficial (en inglés)](https://angular.io/guide/architecture-components#introduction-to-components)
 </p></details>
 
-- [ ] **Component Lifecycle (ej. ngOnInit, ngOnChanges, ...)**
-
-  <details><summary>Links</summary><p>
-
-  * [Component Lifecycle - Documentación oficial (en inglés)](https://angular.io/guide/lifecycle-hooks)
-</p></details>
-
 - [ ] **Directivas estructurales (ngIf / ngFor)**
 
   <details><summary>Links</summary><p>
@@ -443,7 +437,36 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 ### Typescript
 
+- [ ] **Narrowing**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
+</p></details>
+
+- [ ] **Decoradores**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/decorators.html)
+</p></details>
+
 #### Tipos básicos
+
+- [ ] **Chequeo estático de tipos**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/basic-types.html#static-type-checking)
+</p></details>
+
+- [ ] **Rigurosidad**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/basic-types.html#strictness)
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/tsconfig#Type_Checking_6248)
+</p></details>
 
 - [ ] **Tipos primitivos**
 
@@ -457,6 +480,13 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   <details><summary>Links</summary><p>
 
   * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#arrays)
+</p></details>
+
+- [ ] **Tipo `any`**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#any)
 </p></details>
 
 - [ ] **Funciones**
@@ -474,11 +504,39 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types)
 </p></details>
 
+- [ ] **Alias de tipos**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-aliases)
+</p></details>
+
 - [ ] **Interfaces**
 
   <details><summary>Links</summary><p>
 
   * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#interfaces)
+</p></details>
+
+- [ ] **Type assertions**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions)
+</p></details>
+
+- [ ] **Tipos literales**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-types)
+</p></details>
+
+- [ ] **null y undefined**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#null-and-undefined)
 </p></details>
 
 - [ ] **Enums**
@@ -497,6 +555,82 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#optional-properties)
 </p></details>
 
+#### Clases
+
+- [ ] **Visibilidad de miembros de clase (public, protected, private)**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#member-visibility)
+</p></details>
+
+- [ ] **Miembros de clase estáticos**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#static-members)
+</p></details>
+
+- [ ] **this**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#this-at-runtime-in-classes)
+</p></details>
+
+- [ ] **Clases abstractas**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#abstract-classes-and-members)
+</p></details>
+
+##### Miembros de clase _(Clases)_
+
+- [ ] **Campos**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#fields)
+</p></details>
+
+- [ ] **Constructors**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#constructors)
+</p></details>
+
+- [ ] **Métodos**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#methods)
+</p></details>
+
+- [ ] **Getters y Setters**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#getters--setters)
+</p></details>
+
+##### Herencia de clases _(Clases)_
+
+- [ ] **implements Clausas**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#implements-clauses)
+</p></details>
+
+- [ ] **extends Clausas**
+
+  <details><summary>Links</summary><p>
+
+  * [Documentación oficial de Typescript](https://www.typescriptlang.org/docs/handbook/2/classes.html#extends-clauses)
+</p></details>
+
 ### Diseño de producto
 
 - [ ] **Crear prototipos de alta fidelidad que incluyan interacciones**
@@ -507,14 +641,16 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 Este proyecto se debe "resolver" de manera individual.
 
-El rango de tiempo estimado para completar el proyecto es de 2 a 3 Sprints.
-
-Los tests unitarios deben cubrir un mínimo del 90% de _statements_, _functions_,
+Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_,
 _lines_ y _branches_.
 
-Por otro lado, deberás definir la estructura de carpetas y archivos que consideres
-necesaria. Puedes guiarte de las convenciones del _framework_ elegido. Por ende,
-los _tests_ y el _setup_ necesario para ejecutarlos, serán hechos por ti.
+El rango de tiempo estimado para completar el proyecto es de 3 a 4 Sprints.
+
+Para implementar este proyecto te recomendamos usar la planificación
+sugerida que se encuentra en el repo
+[movie-challenge-planner](https://github.com/laboratoria/movie-challenge-planner)
+el cual provee un CLI para hacer fork del presente repositorio y crear un
+GitHub Project con el _milestone_ e _issues_ de cada historia de usuaria.
 
 ## 5. Consideraciones técnicas
 
@@ -536,13 +672,13 @@ Uno de los mayores objetivos de este proyecto es aprender a usar una librería o
 framework popular para desarrollar una web app.
 Debes elegir entre [React](https://es.react.dev/) o [Angular](https://angular.io/).
 
-Ten en cuenta que si eliges Angular, tienes la obligación de usar [TypeScript](https://www.typescriptlang.org/).
+Si usas Angular o React, tienes la obligación de usar [TypeScript](https://www.typescriptlang.org/).
 _Typescript_ es un lenguaje de programación fuertemente tipado basado en
 javascript.
 
-Si eliges React, la decisión de usar Typescript es opcional (pero te lo
-recomendamos!). Aquí puedes encontrar más información en relación a cómo iniciar
-tu proyecto con [Typescript y React](https://itnext.io/create-react-v18-typescript-project-with-vite-d0d602e4a60e).
+Si usas Angular, **te recomendamos usar la versión 14**. Para esto es necesario que tengas instalada
+la version 12 de NodeJS. Puedes encontrar una guia de instalación [acá](https://github.com/Laboratoria/frontend-technologies-simple-example/tree/main/angular-example)
+o consultar con tus coaches.
 
 La aplicación debe hacer uso de `npm-scripts` y contar con scripts `start`,
 `test`, `build` y `deploy`, que se encarguen de arrancar, correr las pruebas,
@@ -564,64 +700,73 @@ hasta hoy.
 
 ---
 
-#### [Historia de usuario 1] Listado de películas
+#### [Historia técnica 1] Configuración del proyecto
 
-Yo como usuaria quiero visualizar en un tabla (filas y columnas) el catálogo de películas
-
-##### Criterios de aceptación
-
-- Se debe usar el _endpoint_ [/discover/movie](https://developer.themoviedb.org/reference/discover-movie).
-- La aplicación cuenta con una paginación para explorar el catálogo por páginas.
-- Para cada película se debe mostrar como mínimo:
-poster, título original y año de lanzamiento.
+Al iniciar un proyecto siempre hay una serie de tareas a las que debemos dedicar tiempo.
 
 ##### Definición de terminado
 
-- Los componentes desarrollados deben contar con test unitarios.
+- [ ] Es posible ejecutar el proyecto y que nuestro navegador muestre la aplicación por defecto.
+
+- [ ] Es posible ejecutar el linter y los tests unitarios.
+
+- [ ] No es posible hacer un push directo a la rama principal
+
+- [ ] Existe un Figma con los diseños de alta fidelidad
+
+- [ ] La aplicación esta desplegada correctamente y se proporciona una URL pública.
 
 ---
 
-#### [Historia de usuario 2] Filtro y ordenamiento
+#### [Historia de usuario 2] Lista de películas
 
-Yo como usuaria quiero filtrar y ordenar el catálogo de películas usando
-los criterios soportados por _TheMovie Database API V3_
-
-##### Criterios de aceptación
-
-- Para filtrar se debe usar el _endpoint_
-[/discover/movie](https://developer.themoviedb.org/reference/discover-movie),
-y alguno de sus parámetros como por ejemplo _with_genres_.
-- Para ordenar se debe usar el _endpoint_
-[/discover/movie](https://developer.themoviedb.org/reference/discover-movie),
-y alguno de sus parámetros como por ejemplo _sort_by_.
-- La paginación debe conservar el filtro y ordenamiento
-- Para cada película se debe mostrar como mínimo:
-poster, título original y año de lanzamiento.
+Como usuario, quiero visualizar el catálogo de películas en filas y columnas.
 
 ##### Definición de terminado
 
-- Los componentes desarrollados deben contar con test unitarios.
+- [ ] Al visitar la aplicación desplegada debe visualizar en una tabla (filas y columnas) el catálogo de películas de [_The Movie Database API V3_](https://developer.themoviedb.org/docs)
 
 ---
 
-#### [Historia de usuario 3] Detalle de una película
+#### [Historia de usuario 3] Lista de películas paginadas
 
-Yo como usuaria quiero consultar los detalles de una película
-
-##### Criterios de aceptación
-
-- Se debe usar el _endpoint_
-[/movie/{movie_id}](https://developer.themoviedb.org/reference/movie-details).
-- Para la película se debe mostrar como mínimo: poster, título original,
-año de lanzamiento, géneros, promedio de votación y total de votos.
-- La interfaz debe permitir retornar al listado de películas conservando
-el filtro y ordenamiento.
+Como usuario, quiero navegar por el catálogo de las películas dividido en páginas.
 
 ##### Definición de terminado
 
-- Los componentes desarrollados deben contar con test unitarios.
+- [ ] Al visitar nuestra aplicación desplegada debe visualizar el catálogo de películas y navegar entre páginas.
 
 ---
+
+#### [Historia de usuario 4] Filtrar y ordenar
+
+Como usuario, quiero poder filtrar las películas por género y ordenarlas por año en orden ascendente y descendente.
+
+##### Definición de terminado
+
+- [ ] El usuario debe poder filtrar el catálogo por género.
+
+- [ ] El usuario debe poder eliminar el filtro para ver películas sin filtrar
+
+- [ ] El usuario debe poder ordenar de forma ascendente el catálogo por año.
+
+- [ ] El usuario debe poder ordenar el catálogo de forma descendente por año.
+
+- [ ] El usuario debe poder eliminar la clasificación para ver las películas sin ordenar
+
+---
+
+#### [Historia de usuario 5] Detalles de la película
+
+Como usuario, quiero poder ver información detallada sobre una película, para poder tomar decisiones informadas sobre si verla o no.
+
+##### Definición de terminado
+
+- [ ] Los usuarios pueden navegar a la página de detalles de la película desde la lista de películas o cualquier sección relevante.
+
+- [ ] Los detalles de la película se muestran de forma destacada, proporcionando información completa sobre la película seleccionada.
+
+- [ ] Los usuarios pueden volver fácilmente a la página anterior.
 
 ## 7. Despliegue
 
@@ -638,7 +783,35 @@ plataforma de _despliegue_ que nos permite desplegar nuestra aplicación
 web estática (HTML, CSS y JavaScript) y también nos permite desplegar
 aplicaciones web que se ejecutan en el servidor (Node.js).
 
-## 8. Consideraciones para pedir tu Project Feedback
+## 8. Planificación
+
+Para implementar este proyecto te recomendamos usar la planificación
+sugerida que se encuentra en el repo
+[movie-challenge-planner](https://github.com/laboratoria/movie-challenge-planner),
+el cual provee un CLI que te ayudará a _forkear_ el presente repositorio y crear un
+GitHub Project con el _milestone_ e _issues_ de cada
+[historia de usuaria](#6-criterios-mínimos-de-aceptación-del-proyecto).
+
+El rango de tiempo estimado para completar el proyecto es de 3 a 4 Sprints.
+Te sugerimos organizarte de la siguiente manera:
+
+- Sprint 1:
+completar la
+[Historia técnica 1](####[historia-técnica-1]-configuración-del-proyecto) y
+[Historia de usuario 2](####-[historia-de-usuario-2]-lista-de-películas)
+- Sprint 2:
+completar la 
+[Historia de usuario 3](####[historia-de-usuario-3]-lista-de-películas-paginadas) e
+iniciar con la
+[Historia de usuario 4](####[historia-de-usuario-4]-filtrar-y-ordenar)
+- Sprint 3:
+completar la
+[Historia de usuario 4](####[historia-de-usuario-4]-filtrar-y-ordenar)
+- Sprint 4:
+completar la
+[Historia de usuario 5](####[historia-de-usuario-5]-detalles-de-la-película)
+
+## 9. Consideraciones para pedir tu Project Feedback
 
 Antes de agendar tu Project Feedback con un coach, asegúrate que tu proyecto:
 
@@ -654,10 +827,10 @@ y life skills desde tu dashboard de estudiante.
 Si no has completado todo lo anterior, no consideramos que estás lista
 para tu sesión de Project Feedback.
 
-## 9. Pistas, tips y lecturas complementarias
+## 10. Pistas, tips y lecturas complementarias
 
 Súmate al canal de Slack
-[#project-movie-challenge-fw](https://claseslaboratoria.slack.com/archives/C04A0GS1WJX)
+[#project-movie-challenge-fw](https://claseslaboratoria.slack.com/archives/C059SJ77ASD)
 para conversar y pedir ayuda del proyecto.
 
 ### Prototipo de alta fidelidad
@@ -693,13 +866,6 @@ Identifica los headers, body, verbos, códigos de respuesta y encodings las peti
 La comunidad de desarrolladoras de cada framework se ha forzado mucho por crear
 documentaciones amigables para quienes inician con cada tecnología. Por lo tanto,
 date la oportunidad de explorar la documentación y probar sus ejemplos y tutoriales.
-
-### Planifica la implementación de la primera historia de usuaria
-
-Toma la primera historia de usuaria y
-divídela en tareas más pequeñas. Identifica
-el orden y prioridad de cada tarea.
-Documenta tu planificacion en Trello o Github Project.
 
 ### Implementa tu primer componente
 
