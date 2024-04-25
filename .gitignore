@@ -24,3 +24,6 @@ dist-ssr
 *.sln
 *.sw?
 coverage
+
+#variables de entorno info sensible que no debe ir al repo
+.env
