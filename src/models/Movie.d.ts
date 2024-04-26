@@ -3,9 +3,7 @@
 export type Movie = {
     title: string;
     poster?: string;
-    year: number;
-    genre: string[];
-    director: string; 
+    year: string;
+    overview: string;
     rating?: number; 
-    duration: number;
 };
