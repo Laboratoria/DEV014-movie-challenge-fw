@@ -4,7 +4,7 @@ import { Movie } from "../models/Movie";
 describe("formatMovie function", () => {
   it("Debería convertir correctamente los datos de la película desde la API", () => {
     const apiMovieData = {
-      return: [
+      results: [
         {
           title: "No Way Up",
           poster_path: "/hu40Uxp9WtpL34jv3zyWLb5zEVY.jpg",

@@ -2,10 +2,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { APIService } from './services/APIService'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  new APIService().getMovies().then((movieList) => {
+  console.log(movieList)
+  })
   return (
     <>
       <div>

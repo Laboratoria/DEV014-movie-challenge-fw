@@ -1,7 +1,7 @@
 import { Movie } from "../models/Movie";
 
 export function formatMovie(apiMovieData: any): Movie[] {
-  return apiMovieData.return.map(
+  return apiMovieData.results.map(
     (movie: any): Movie => ({
       title: movie.title,
       poster: movie.poster_path,
