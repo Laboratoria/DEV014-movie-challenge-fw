@@ -1,9 +1,9 @@
 import { formatMovie } from "../utils/transformers";
 import { Movie } from "../models/Movie";
-const token = import.meta.env.VITE_TOKEN_API;
+import { token } from "./constans";
 
 export class APIService {
-  getMovies(): Promise<Movie[]> {
+  getMovies(): Promise<Movie[]> { //hacerle mock a getmovies
     return fetch(
       "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc",
       {
