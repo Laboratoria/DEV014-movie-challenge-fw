@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
-import { MovieList } from './MovieList';
-import { APIService } from '../services/APIService';
-import { Movie } from '../models/Movie';
+import { useState, useEffect } from "react";
+import { MovieList } from "./MovieList";
+import { APIService } from "../services/APIService";
+import { Movie } from "../models/Movie";
 
 function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [movies, setMovies] = useState<Movie[]>([]);
   const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   const fetchData = async () => {
     setIsLoading(true);
@@ -22,10 +26,7 @@ function Home() {
       }
       setIsLoading(false);
     }
-   
   };
-
-  fetchData();
 
   return (
     <div>

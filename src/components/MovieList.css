@@ -1,0 +1,7 @@
+.containerlist{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px; 
+    gap: 20px;
+}
