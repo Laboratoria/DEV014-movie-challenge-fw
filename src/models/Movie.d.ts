@@ -2,8 +2,8 @@
 //relevante necesaria para la interfaz de usuario y la lógica de negocio.
 export type Movie = {
     title: string;
-    poster?: string;
+    poster: string;
     year: string;
-    overview: string;
+    overview?: string;
     rating?: number; 
 };
