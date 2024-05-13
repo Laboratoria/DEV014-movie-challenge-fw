@@ -5,7 +5,7 @@ import '@testing-library/jest-dom/jest-globals';
 import '@testing-library/jest-dom';
 
 describe ('movie card funciona correctamente', () => {
-    it('se comprueba que el titulo, el año y el poster esten correctamente', () => {
+    it('se comprueba que el titulo y el año esten correctamente', () => {
         const movie: Movie = {
             title: 'titanic',
             year: '2022',
