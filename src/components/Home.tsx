@@ -15,7 +15,7 @@ function Home() {
   const fetchData = async () => {
     setIsLoading(true);
     try {
-      const movieList: Movie[] = await new APIService().getMovies();
+      const movieList: Movie[] = (await new APIService().getMovies()).movies;
       setMovies(movieList);
       setIsLoading(false);
     } catch (error) {
