@@ -1,6 +1,7 @@
-import { formatMovie } from "../utils/transformers";
+import { formatMovie } from "./transformers";
 import { Movie } from "../models/Movie";
-jest.mock("src/services/constans",()=> { return {token: ""}})
+
+jest.mock("../services/constans.ts",()=> { return {token: ""}})
 
 describe("formatMovie function", () => {
   it("Debería convertir correctamente los datos de la película desde la API", () => {
