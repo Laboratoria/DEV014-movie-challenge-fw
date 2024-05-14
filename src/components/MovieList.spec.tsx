@@ -4,7 +4,7 @@ import { Movie } from "../models/Movie";
 import "@testing-library/jest-dom/jest-globals";
 import "@testing-library/jest-dom";
 
-describe("Debe retornar una lista de peliculas corectamente", () => {
+describe("Debe retornar una lista de peliculas correctamente", () => {
   it("se comprueba que los titulos y los años esten correctamente", () => {
     const movies: Movie[] = [
       //movies es una lista con el type movie

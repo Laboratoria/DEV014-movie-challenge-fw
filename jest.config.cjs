@@ -1,7 +1,7 @@
 
 module.exports = {
     roots: ["<rootDir>/src"],
-    testEnvironment: "jsdom",
+    testEnvironment: "jest-environment-jsdom-global",
     transform: {
       "^.+\\.(ts|js|tsx|jsx)$": "@swc/jest",
     },

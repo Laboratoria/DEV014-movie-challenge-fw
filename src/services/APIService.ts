@@ -1,11 +1,16 @@
 import { formatMovie } from "../utils/transformers";
 import { Movie } from "../models/Movie";
-import { token } from "./constans";
+import { token } from "../constans";
 
 export class APIService {
-  getMovies(): Promise<Movie[]> { //hacerle mock a getmovies
+  getMovies(
+    filters: { page: number } = { page: 1 }
+  ): Promise<{
+    metaData: { pagination: { currentPage: number; totalPages: number } };
+    movies: Movie[];
+  }> {
     return fetch(
-      "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc",
+      `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${filters.page}&sort_by=popularity.desc`,
       {
         method: "GET",
         headers: {
@@ -16,10 +21,13 @@ export class APIService {
     )
       .then((response) => response.json())
       .then((moviesResult) => {
-        return formatMovie(moviesResult);
+        const movies = formatMovie(moviesResult);
+        return {
+          metaData: {pagination: { currentPage: moviesResult.page, totalPages: moviesResult.total_pages } },
+          movies: movies
+        }
       })
       .catch((error) => {
-        console.error("Error fetching movies:", error);
         throw error;
       });
   }
