@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
+import { useSearchParams } from 'react-router-dom';
 import { MovieList } from "./MovieList";
 import { APIService } from "../services/APIService";
 import { Movie } from "../models/Movie";
@@ -8,15 +9,16 @@ function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [movies, setMovies] = useState<Movie[]>([]);
   const [error, setError] = useState<Error | null>(null);
-
+  const [searchParams, setSearchParams] = useSearchParams({currentPage:  "1" });
   useEffect(() => {
-    fetchData();
-  }, []);
+    fetchData(Number (searchParams.get('currentPage')));
+    // setSearchParams ({currentPage:  "1"})
+  }, [searchParams]);
 
-  const fetchData = async () => {
+  const fetchData = async (page: number) => {
     setIsLoading(true);
     try {
-      const movieList: Movie[] = (await new APIService().getMovies()).movies;
+      const movieList: Movie[] = (await new APIService().getMovies({page: page })).movies;
       setMovies(movieList);
       setIsLoading(false);
     } catch (error) {
@@ -29,10 +31,9 @@ function Home() {
     }
   };
 
-  const onSelectedPage =()=>{
-  
-
-  }
+  const onSelectedPage = (page) => {
+    setSearchParams({currentPage: page });
+  };
   return (
     <div>
       {isLoading ? (
@@ -43,9 +44,12 @@ function Home() {
         <MovieList movielist={movies} />
       )}
 
-    <Pagination currentPage={1} totalPages={6} onSelectPage={onSelectedPage}/>
+      <Pagination
+        currentPage={Number (searchParams.get('currentPage'))}
+        totalPages={20}
+        onSelectPage={onSelectedPage}
+      />
     </div>
-
   );
 }
 
