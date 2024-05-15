@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { MovieList } from "./MovieList";
 import { APIService } from "../services/APIService";
 import { Movie } from "../models/Movie";
+import { Pagination } from "./Pagination";
 
 function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -28,6 +29,10 @@ function Home() {
     }
   };
 
+  const onSelectedPage =()=>{
+  
+
+  }
   return (
     <div>
       {isLoading ? (
@@ -37,7 +42,10 @@ function Home() {
       ) : (
         <MovieList movielist={movies} />
       )}
+
+    <Pagination currentPage={1} totalPages={6} onSelectPage={onSelectedPage}/>
     </div>
+
   );
 }
 

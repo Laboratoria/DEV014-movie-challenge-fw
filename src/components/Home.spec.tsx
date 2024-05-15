@@ -140,6 +140,7 @@ describe("pruebas para Home", () => {
     await act(async () => {
       const { getByText } = render(<Home />);
       setTimeout(() => {
+        console.log("soy el console log de cargando") // no lo esta tomando 
         expect(getByText("Cargando...")).toBeInTheDocument();
       }, 100);
     });
@@ -191,11 +192,13 @@ describe("pruebas para Home", () => {
           }),
       });
     });
-
+    console.log("holii")
     await act(async () => {
       const { getByText } = render(<Home />);
       setTimeout(() => {
-        expect(getByText("Error:")).toBeInTheDocument();
+        console.log("holii") // no lo esta tomando 
+        expect(getByText("Errff:")).toBeInTheDocument();
+        console.log("bye") // no lo esta tomando 
       }, 100);
     });
   });
