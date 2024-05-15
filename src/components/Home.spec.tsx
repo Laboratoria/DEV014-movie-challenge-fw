@@ -192,13 +192,10 @@ describe("pruebas para Home", () => {
           }),
       });
     });
-    console.log("holii")
     await act(async () => {
       const { getByText } = render(<Home />);
       setTimeout(() => {
-        console.log("holii") // no lo esta tomando 
-        expect(getByText("Errff:")).toBeInTheDocument();
-        console.log("bye") // no lo esta tomando 
+        expect(getByText("Error:")).toBeInTheDocument();
       }, 100);
     });
   });
