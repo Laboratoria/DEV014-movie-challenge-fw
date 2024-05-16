@@ -1,7 +1,7 @@
 import { Movie } from "../models/Movie";
 import { act, render } from "@testing-library/react";
 import Home from "./Home";
-
+import { MemoryRouter } from "react-router-dom";
 jest.mock("../constans", () => ({ token: "mocked-token" }));
 
 describe("pruebas para Home", () => {
@@ -54,7 +54,7 @@ describe("pruebas para Home", () => {
     });
 
     await act(async () => {
-      const { getByText } = render(<Home />);
+      const { getByText } = render(<MemoryRouter><Home /></MemoryRouter>);
       const moviesExpected: Movie[] = [
         {
           title: "Kingdom of the Planet of the Apes",
@@ -138,7 +138,7 @@ describe("pruebas para Home", () => {
     });
 
     await act(async () => {
-      const { getByText } = render(<Home />);
+      const { getByText } = render(<MemoryRouter><Home /></MemoryRouter>);
       setTimeout(() => {
         console.log("soy el console log de cargando") // no lo esta tomando 
         expect(getByText("Cargando...")).toBeInTheDocument();
@@ -193,7 +193,7 @@ describe("pruebas para Home", () => {
       });
     });
     await act(async () => {
-      const { getByText } = render(<Home />);
+      const { getByText } = render(<MemoryRouter><Home /></MemoryRouter>);
       setTimeout(() => {
         expect(getByText("Error:")).toBeInTheDocument();
       }, 100);
