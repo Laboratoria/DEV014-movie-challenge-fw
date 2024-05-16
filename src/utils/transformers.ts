@@ -11,3 +11,6 @@ export function formatMovie(apiMovieData: any): Movie[] {
     })
   );
 }
+export function formatGenresToMap (movieGenres: any) {
+ return new Map( movieGenres.genres)
+}
