@@ -6,4 +6,5 @@ export type Movie = {
     year: string;
     overview?: string;
     rating?: number; 
+    genres: string[];
 };

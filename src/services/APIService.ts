@@ -1,11 +1,10 @@
-import { formatMovie } from "../utils/transformers";
+import { formatMovie, formatGenresToMap } from "../utils/transformers";
 import { Movie } from "../models/Movie";
 import { token } from "../constans";
+import { getMovieGenres } from "./movieService";
 
 export class APIService {
-  getMovies(
-    filters: { page: number } = { page: 1 }
-  ): Promise<{
+  getMovies(filters: { page: number } = { page: 1 }): Promise<{
     metaData: { pagination: { currentPage: number; totalPages: number } };
     movies: Movie[];
   }> {
@@ -21,11 +20,25 @@ export class APIService {
     )
       .then((response) => response.json())
       .then((moviesResult) => {
-        const movies = formatMovie(moviesResult);
-        return {
-          metaData: {pagination: { currentPage: moviesResult.page, totalPages: moviesResult.total_pages } },
-          movies: movies
-        }
+        return getMovieGenres()
+          .then((genresResult) => {
+            const movies = formatMovie(
+              moviesResult,
+              formatGenresToMap(genresResult)
+            );
+            return {
+              metaData: {
+                pagination: {
+                  currentPage: moviesResult.page,
+                  totalPages: moviesResult.total_pages,
+                },
+              },
+              movies: movies,
+            };
+          })
+          .catch((error) => {
+            throw error;
+          });
       })
       .catch((error) => {
         throw error;
