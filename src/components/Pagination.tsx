@@ -1,12 +1,10 @@
 import "./Pagination.css";
-
 interface PaginationProps {
   //interface-> me especifica que PaginationProps es un objeto
   currentPage: number;
   totalPages: number;
   onSelectPage: (pageNumber: number) => void;
 }
-
 export function Pagination({
   currentPage,
   totalPages,
@@ -25,29 +23,39 @@ export function Pagination({
   };
   const onNext = () => {
     onSelectPage(currentPage + 1);
-  }
+  };
   return (
     <div className="containerButton">
       <button disabled={currentPage === 1} onClick={onBack}>
-      &lt;Anterior
+        &lt;Anterior
       </button>
 
       {pages.map((page) => {
         if (currentPage === page) {
           return (
-            <button className="currentPage" onClick={() => onClick(page)} key={page}>
+            <button
+              className="currentPage"
+              onClick={() => onClick(page)}
+              key={page}
+            >
               {page}
             </button>
           );
         } else {
           return (
-            <button className="otherpage" onClick={() => onClick(page)} key={page}>
+            <button
+              className="otherpage"
+              onClick={() => onClick(page)}
+              key={page}
+            >
               {page}
             </button>
           );
         }
       })}
-      <button disabled={totalPages === currentPage} onClick={onNext}>Siguiente &gt;</button>
+      <button disabled={totalPages === currentPage} onClick={onNext}>
+        Siguiente &gt;
+      </button>
     </div>
   );
 }
