@@ -1,16 +1,17 @@
 import React from "react";
+import "./ListOptions.css"
 
 export function ListOptions(props: {
   options: { value: string; label: string }[];
   selectedOption: { value: string; label: string };
-  onChange: () => void;
+  onChange: (selectedOption: { value: string; label: string }) => void;
   onClear: () => void;
 }) {
   return (
     <React.Fragment> 
-      <select name="" id="" onChange={props.onChange}>
+      <select name="" id="seletFilter" onChange={(event)=>props.onChange(props.options.find((option)=>option.value===event.target.value))}>
         {props.options.map((option) => {
-          return <option value={option.value}> {option.label} </option>;
+          return <option key={option.value} value={option.value}> {option.label} </option>;
         })}
       </select>
       <button className="resetButton" onClick={props.onClear}>Reset</button>

@@ -1,7 +1,6 @@
 import { formatMovie, formatGenresToMap } from "../utils/transformers";
 import { Movie } from "../models/Movie";
 import { token } from "../constans";
-import { getMovieGenres } from "./movieService";
 
 export class APIService {
   getMovies(
@@ -15,7 +14,7 @@ export class APIService {
     movies: Movie[];
   }> {
     return fetch(
-      `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${filters.page}&sort_by=popularity.desc&with_genres=${filters.genreId || ""}&sort_by=${filters.sortBy || ""}`,
+      `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${filters.page}&with_genres=${filters.genreId || ""}&sort_by=${filters.sortBy || ""}`,
       {
         method: "GET",
         headers: {
