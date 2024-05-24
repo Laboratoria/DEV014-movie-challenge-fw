@@ -45,7 +45,7 @@ function Home() {
   useEffect(() => {
     getMovieGenres()
       .then((genres) => {
-        setSelect(formatGenresToOptions(genres));
+        setSelect([{value: null, label: "filter by"}, ...formatGenresToOptions(genres)]);
       })
       .catch(() => {});
   }, []);
@@ -96,7 +96,8 @@ function Home() {
           setSelectValue(selectedOption);
         }}
         onClear={() => setSelectValue(null)}
-      />
+      /> 
+
       <ListOptions
         options={sortByOptions}
         selectedOption={sortBy}
