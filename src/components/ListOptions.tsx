@@ -9,9 +9,9 @@ export function ListOptions(props: {
 }) {
   return (
     <React.Fragment> 
-      <select name="" id="seletFilter" onChange={(event)=>props.onChange(props.options.find((option)=>option.value===event.target.value))}>
+      <select  name="" id="seletFilter" onChange={(event)=>props.onChange(props.options.find((option)=>option.value===event.target.value))}>
         {props.options.map((option) => {
-          return <option key={option.value} value={option.value}> {option.label} </option>;
+          return <option selected={props.selectedOption?.value===option.value} key={option.value} value={option.value}> {option.label} </option>;
         })}
       </select>
       <button className="resetButton" onClick={props.onClear}>Reset</button>
