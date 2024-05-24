@@ -17,3 +17,14 @@ img{
     font-weight: 300;
     font-style: normal;
 }
+.pGenre{
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 11px;
+    width: 100%;
+}
+.pGenre{
+    display: flex;
+    justify-content: center;
+}
