@@ -11,8 +11,6 @@ export function MovieCard({movie}: moviecardprops) {
       <h3 className="tittleName">{movie.title}</h3>
       <p className="pName">{movie.year}</p>
       <p className="pGenre">{movie.genres}</p>
-      {/* <p>{props.movie.overview}</p>
-      <p>{props.movie.rating}</p> */}
     </div>
   );
 }

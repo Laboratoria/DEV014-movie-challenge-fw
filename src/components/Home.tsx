@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { MovieList } from "./MovieList";
 import { APIService } from "../services/APIService";
@@ -10,7 +10,7 @@ import {
 } from "../utils/transformers";
 import { getMovieGenres } from "./../services/movieService";
 import {ListOptions} from "./ListOptions";
-
+import { MovieDetail } from "./MovieDetail";
 interface Option {
   value: string;
   label: string;
@@ -58,7 +58,6 @@ function Home() {
     setIsLoading(true);
     try {
       const movieGenres = await getMovieGenres();
-      console.log(sortBy);
       const movieList: Movie[] = (
        
         await new APIService().getMovies(
@@ -89,6 +88,8 @@ function Home() {
 
   return (
     <div>
+      
+      <MovieDetail></MovieDetail> 
       <ListOptions
         options={select}
         selectedOption={selectValue}
