@@ -1,0 +1,30 @@
+.containerMovieDetail{
+    background-color: #2C363E;
+    height: 840px ;
+    display: flex;
+    padding: 30px;
+    font-family: "Lexend", sans-serif;
+}
+.backButton:hover{
+ background-color: #E43D4E;
+}
+.imgMovieDetail{
+    height: 700px;
+}
+.containerMovieDetailRight{
+    padding: 30px;
+}
+.titleMovieDetail{
+    font-size: 40px;
+}
+.yearMovieDetail{
+    font-size: 20px;
+    font-weight: 900;
+}
+.overviewMovieDetail{
+    font-size: 22px;
+}
+.ratingMovieDetail{
+    font-size: 22px;
+    font-weight: 900;
+}
