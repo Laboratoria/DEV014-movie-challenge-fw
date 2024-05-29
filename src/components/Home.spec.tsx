@@ -57,20 +57,24 @@ describe("pruebas para Home", () => {
       const { getByText } = render(<MemoryRouter><Home /></MemoryRouter>);
       const moviesExpected: Movie[] = [
         {
+          id: 123,
           title: "Kingdom of the Planet of the Apes",
           year: "2024-05-08",
           poster: "/gKkl37BQuKTanygYQG1pyYgLVgf.jpg",
           overview:
             "Several generations in the future following Caesar's reign, apes are now the dominant species and live harmoniously while humans have been reduced to living in the shadows. As a new tyrannical ape leader builds his empire, one young ape undertakes a harrowing journey that will cause him to question all that he has known about the past and to make choices that will define a future for apes and humans alike.",
           rating: 7.213,
+          genres: ["accion", "aventura"]
         },
         {
+          id: 222,
           title: "Godzilla x Kong: The New Empire",
           year: "2024-03-27",
           poster: "/1G978IJ2KDPl4Z4icZrxZTozb1v.jpg",
           overview:
             "Following their explosive showdown, Godzilla and Kong must reunite against a colossal undiscovered threat hidden within our world, challenging their very existence – and our own.",
           rating: 6.517,
+          genres: ["drama", "comedia"]
         },
       ];
 

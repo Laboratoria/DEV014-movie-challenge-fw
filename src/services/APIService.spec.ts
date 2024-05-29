@@ -14,7 +14,7 @@ describe("pruebas para APIService", () => {
               {
                 adult: false,
                 backdrop_path: "/fqv8v6AycXKsivp1T5yKtLbGXce.jpg",
-                genre_ids: [878, 12, 28],
+                genre_ids: [123],
                 id: 653346,
                 original_language: "en",
                 original_title: "Kingdom of the Planet of the Apes",
@@ -31,7 +31,7 @@ describe("pruebas para APIService", () => {
               {
                 adult: false,
                 backdrop_path: "/lLh39Th5plbrQgbQ4zyIULsd0Pp.jpg",
-                genre_ids: [878, 28, 12],
+                genre_ids: [123],
                 id: 823464,
                 original_language: "en",
                 original_title: "Godzilla x Kong: The New Empire",
@@ -51,24 +51,30 @@ describe("pruebas para APIService", () => {
           }),
       });
     });
-    const movies: Movie[] = (await new APIService().getMovies()).movies //cuando utilizo await estoy resolviendo la promesa
+    const movies: Movie[] = (await new APIService().getMovies({page: 1,
+      genreId: null,
+      sortBy: null,}, new Map([[123, "accion"]]))).movies //cuando utilizo await estoy resolviendo la promesa
     const moviesExpected: Movie[] = [
       //movies es una lista con el type movie
       {
+        id: 653346,
         title: "Kingdom of the Planet of the Apes",
         year: "2024-05-08",
         poster: "/gKkl37BQuKTanygYQG1pyYgLVgf.jpg",
         overview:
           "Several generations in the future following Caesar's reign, apes are now the dominant species and live harmoniously while humans have been reduced to living in the shadows. As a new tyrannical ape leader builds his empire, one young ape undertakes a harrowing journey that will cause him to question all that he has known about the past and to make choices that will define a future for apes and humans alike.",
         rating: 7.213,
+        genres: ["accion"]
       },
       {
+        id: 823464,
         title: "Godzilla x Kong: The New Empire",
         year: "2024-03-27",
         poster: "/1G978IJ2KDPl4Z4icZrxZTozb1v.jpg",
         overview:
           "Following their explosive showdown, Godzilla and Kong must reunite against a colossal undiscovered threat hidden within our world, challenging their very existence – and our own.",
         rating: 6.517,
+        genres: ["accion"]
       },
     ];
 
@@ -90,7 +96,9 @@ describe("pruebas para APIService", () => {
       });
 
       try {
-        await new APIService().getMovies();
+        await new APIService().getMovies({page: 1,
+          genreId: null,
+          sortBy: null,}, new Map([[123, "accion"]]));
         fail('La respuesta fue exitosa pero debio ser errónea')
       } catch (error) {
 
