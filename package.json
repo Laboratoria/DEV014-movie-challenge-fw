@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "vitest",
+    "test": "jest",
     "start": "vite"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "jsdom": "^24.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-loading": "^2.0.3",
     "react-router-dom": "^6.23.0",
     "vitest": "^1.6.0"
   },
