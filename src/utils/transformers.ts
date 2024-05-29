@@ -7,6 +7,7 @@ export function formatMovie(
   moviesGenres: Map<number, string>
 ): Movie {
   return {
+    id: apiMovieData.id,
     title: apiMovieData.title,
     poster: apiMovieData.poster_path,
     year: apiMovieData.release_date,

@@ -4,13 +4,14 @@ import { MovieList } from "./MovieList";
 import { APIService } from "../services/APIService";
 import { Movie } from "../models/Movie";
 import { Pagination } from "./Pagination";
+import ReactLoading from "react-loading";
+
 import {
   formatGenresToMap,
   formatGenresToOptions,
 } from "../utils/transformers";
 import { getMovieGenres } from "./../services/movieService";
 import {ListOptions} from "./ListOptions";
-import { MovieDetail } from "./MovieDetail";
 interface Option {
   value: string;
   label: string;
@@ -72,7 +73,6 @@ function Home() {
       setMovies(movieList);
       setIsLoading(false);
     } catch (error) {
-      console.error(error);
       if (error instanceof Error) {
         setError(error);
       } else {
@@ -88,8 +88,6 @@ function Home() {
 
   return (
     <div>
-      
-      <MovieDetail></MovieDetail> 
       <ListOptions
         options={select}
         selectedOption={selectValue}
@@ -108,7 +106,12 @@ function Home() {
         onClear={() => setSortBy(null)}
       />
       {isLoading ? (
-        <p>Cargando...</p>
+        <div className="reactLoading"> <ReactLoading
+        type={"cylon"}
+        color={"#EAB108"}
+        height={500}
+        width={600}
+      /> </div>
       ) : error ? (
         <p>Error: {error.message}</p>
       ) : (
