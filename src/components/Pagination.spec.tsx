@@ -13,7 +13,6 @@ describe("componente de paginación", () => {
     const buttons = screen.getAllByRole("button");
     buttons.forEach((button) => {
       fireEvent.click(button);
-      screen.debug();
     });
   });
 });
