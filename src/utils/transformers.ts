@@ -1,5 +1,3 @@
-// utils.ts
-
 import { Movie } from "../models/Movie";
 
 export function formatMovie(

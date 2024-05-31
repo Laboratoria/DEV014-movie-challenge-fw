@@ -12,5 +12,7 @@ module.exports = {
     "^.+\\.css$": "<rootDir>/src/__mocks__/file-mock.cjs",
     "^.+\\.(css|png|jpg|jpeg|svg)$": "<rootDir>/src/__mocks__/file-mock.cjs",
   },
+  verbose: false,
+  silent: true,
 
 };
