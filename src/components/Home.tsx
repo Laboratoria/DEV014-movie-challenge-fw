@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { MovieList } from "./MovieList";
 import { APIService } from "../services/APIService";
@@ -6,14 +6,12 @@ import { Movie } from "../models/Movie";
 import { Pagination } from "./Pagination";
 import ReactLoading from "react-loading";
 
-import {
-  formatGenresToMap,
-  formatGenresToOptions,
-} from "../utils/transformers";
+import { formatGenresToMap, formatGenresToOptions } from "../utils/transformers";
 import { getMovieGenres } from "./../services/movieService";
-import {ListOptions} from "./ListOptions";
+import { ListOptions } from "./ListOptions";
+
 interface Option {
-  value: string;
+  value: string | null;
   label: string;
 }
 
@@ -46,7 +44,7 @@ function Home() {
   useEffect(() => {
     getMovieGenres()
       .then((genres) => {
-        setSelect([{value: null, label: "filter by"}, ...formatGenresToOptions(genres)]);
+        setSelect([{ value: null, label: "Filter by" }, ...formatGenresToOptions(genres)]);
       })
       .catch(() => {});
   }, []);
@@ -60,12 +58,11 @@ function Home() {
     try {
       const movieGenres = await getMovieGenres();
       const movieList: Movie[] = (
-       
         await new APIService().getMovies(
           {
             page: page,
-            genreId: Number(selectValue?.value),
-            sortBy: sortBy?.value,
+            genreId: selectValue ? Number(selectValue.value) : undefined,
+            sortBy: sortBy?.value || undefined,
           },
           formatGenresToMap(movieGenres)
         )
@@ -91,27 +88,20 @@ function Home() {
       <ListOptions
         options={select}
         selectedOption={selectValue}
-        onChange={(selectedOption) => {
-          setSelectValue(selectedOption);
-        }}
-        onClear={() => setSelectValue(null)}
-      /> 
+        onChange={(selectedOption) => setSelectValue(selectedOption)}
+        onClear={() => setSelectValue({ value: null, label: "Filter by" })}
+      />
 
       <ListOptions
         options={sortByOptions}
         selectedOption={sortBy}
-        onChange={(selectedOption) => {
-          setSortBy(selectedOption);
-        }}
+        onChange={(selectedOption) => setSortBy(selectedOption)}
         onClear={() => setSortBy(null)}
       />
       {isLoading ? (
-        <div className="reactLoading"> <ReactLoading
-        type={"cylon"}
-        color={"#EAB108"}
-        height={500}
-        width={600}
-      /> </div>
+        <div className="reactLoading">
+          <ReactLoading type={"cylon"} color={"#EAB108"} height={500} width={600} />
+        </div>
       ) : error ? (
         <p>Error: {error.message}</p>
       ) : (
@@ -127,3 +117,4 @@ function Home() {
 }
 
 export default Home;
+

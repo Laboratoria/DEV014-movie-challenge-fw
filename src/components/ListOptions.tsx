@@ -1,20 +1,39 @@
 import React from "react";
-import "./ListOptions.css"
+import "./ListOptions.css";
 
-export function ListOptions(props: {
-  options: { value: string; label: string }[];
-  selectedOption: { value: string; label: string };
-  onChange: (selectedOption: { value: string; label: string }) => void;
+interface Option {
+  value: string | null;
+  label: string;
+}
+
+interface ListOptionsProps {
+  options: Option[];
+  selectedOption: Option | null;
+  onChange: (selectedOption: Option) => void;
   onClear: () => void;
-}) {
+}
+
+export function ListOptions({ options, selectedOption, onChange, onClear }: ListOptionsProps) {
   return (
-    <React.Fragment> 
-      <select  name="" id="seletFilter" onChange={(event)=>props.onChange(props.options.find((option)=>option.value===event.target.value))}>
-        {props.options.map((option) => {
-          return <option  key={option.value} value={option.value}> {option.label} </option>;
-        })}
+    <React.Fragment>
+      <select
+        name=""
+        id="seletFilter"
+        value={selectedOption?.value || ""}
+        onChange={(event) => {
+          const selectedOption = options.find(option => option.value === event.target.value);
+          if (selectedOption) {
+            onChange(selectedOption);
+          }
+        }}
+      >
+        {options.map((option) => (
+          <option key={option.value} value={option.value || ""}>
+            {option.label}
+          </option>
+        ))}
       </select>
-      <button className="resetButton" onClick={props.onClear}>Reset</button>
-    </React.Fragment> //div tambien puede servir 🤠
+      <button className="resetButton" onClick={onClear}>Reset</button>
+    </React.Fragment>
   );
 }
