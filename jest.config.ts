@@ -12,7 +12,7 @@ module.exports = {
         ]
       },
       testMatch: ['**/__tests__/**/*.ts?(x)', '**/?(*.)+(spec|test).ts?(x)'],
-      transformIgnorePatterns: ['<rootDir>/node_modules/'],
+      transformIgnorePatterns: ['<rootDir>/node_modules/(?!.*\\.(mjs|jsx?|tsx?)$)'],
       moduleNameMapper: {
         '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
         '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/src/__mocks__/fileMock.js'

@@ -14,7 +14,7 @@ const MovieList: React.FC = () => {
   //[]carguen los datos de las películas, movies
   const [movies, setMovies] = useState<Movie[]>([]);
 
-  //manejador de solicitud de red
+  //manejador de solicitud de redx
   useEffect(() => {
     fetch('https://api.example.com/movies')
       .then(response => response.json())
