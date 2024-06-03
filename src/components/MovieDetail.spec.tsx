@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom';  // Asegúrate de que esto esté al principio del archivo
+import '@testing-library/jest-dom';  
 import { render, waitFor, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { MovieDetail } from "./MovieDetail";
@@ -34,7 +34,6 @@ describe("MovieDetail", () => {
       expect(screen.getByText("The Movie")).toBeInTheDocument();
       expect(screen.getByText("Fecha de lanzamiento: 2022")).toBeInTheDocument();
       expect(screen.getByText("ActionAdventure")).toBeInTheDocument();
-      // expect(screen.getByText("Adventure")).toBeInTheDocument();
       expect(screen.getByText("This is a movie overview")).toBeInTheDocument();
       expect(screen.getByText("Rating: 8.5")).toBeInTheDocument();
     });
