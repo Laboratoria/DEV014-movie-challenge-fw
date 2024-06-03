@@ -5,9 +5,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { getMovieDetail } from "../services/movieService";
 import ReactLoading from "react-loading";
 
-type moviedetailprops = {
-  movie: Movie;
-};
 export function MovieDetail() {
   const navigate = useNavigate();
   const [error, setError] = useState<Error | null>(null);
@@ -47,7 +44,7 @@ export function MovieDetail() {
       ) : (
         <div className="containerMovieDetail">
           <div className="containerMovieDetailLeft">
-            <button onClick={()=>{navigate(`/`)}} className="backButton"> atras </button>
+            <button onClick={()=>{navigate(-1)}} className="backButton"> atras </button>
             <img
               className="imgMovieDetail"
               src={

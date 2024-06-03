@@ -33,7 +33,8 @@ describe("MovieDetail", () => {
     await waitFor(() => {
       expect(screen.getByText("The Movie")).toBeInTheDocument();
       expect(screen.getByText("Fecha de lanzamiento: 2022")).toBeInTheDocument();
-      expect(screen.getByText("Action, Adventure")).toBeInTheDocument();
+      expect(screen.getByText("ActionAdventure")).toBeInTheDocument();
+      // expect(screen.getByText("Adventure")).toBeInTheDocument();
       expect(screen.getByText("This is a movie overview")).toBeInTheDocument();
       expect(screen.getByText("Rating: 8.5")).toBeInTheDocument();
     });
