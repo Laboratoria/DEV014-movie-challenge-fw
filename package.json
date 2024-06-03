@@ -9,7 +9,7 @@
     "watch": "babel src --out-dir lib --extensions \".ts,.tsx\" --watch",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "start": "react-scripts start",
-    "test": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 && jest",
+    "test": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 && jest --verbose --coverage",
     "preview": "vite preview",
     "deploy": "netlify deploy --prod"
   },
