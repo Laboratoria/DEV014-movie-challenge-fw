@@ -1,6 +1,5 @@
-//declara interfaz movie
-//datos que quiero manejar en la interfaz
-interface Movie {
+//resultado que API entrega
+interface ApiMovieResult {
   adult: boolean;
   backdrop_path: string;
   genre_ids: number[];
@@ -15,6 +14,6 @@ interface Movie {
   video: boolean;
   vote_average: number;
   vote_count: number;
-  }
-  
-  export default Movie;
+}
+
+export default ApiMovieResult;

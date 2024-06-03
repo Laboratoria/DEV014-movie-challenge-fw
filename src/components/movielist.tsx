@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { formatMovie } from '../utils/transformers';
 import  ApiMovie  from '../models/ApiMovieList';
 import Movie from '../models/Movie';
+import { getMovies } from '../services/APIService';
 
 //React.FC funcional componente
 const MovieList: React.FC = () => {
@@ -12,22 +13,23 @@ const MovieList: React.FC = () => {
   //permite agregar estado local a componentes funcionales.
   //<Movie[]> especifica que el estado será un array de objetos Movie.
   //[]carguen los datos de las películas, movies
+
+  //variables cambian de estado
+  //setMovies modifica la variable movies
+  //movies cambia, porque va a buscar a fuera la informacion
+  //funciones reactivas
   const [movies, setMovies] = useState<Movie[]>([]);
 
-  //manejador de solicitud de redx
+
+  //detecta cambios
   useEffect(() => {
-    fetch('https://api.example.com/movies')
-      .then(response => response.json())
-      //transforma cada objeto de datos de la API usando formatMovie.
-      .then((data: ApiMovie[]) => {
-        const formattedMovies = data.map(apiMovie => formatMovie(apiMovie));
-        //actualiza el estado movies con los datos transformados.
-        setMovies(formattedMovies);
-      })
-      .catch(error => {
-        console.error('Error fetching movies:', error);
-      });
+
+
+      //cuando no hay dependencias, se ejecutara una sola vez en el inicio
   }, []);
+
+  //ejecuta funcion
+  //
 
   return (
     <div>
