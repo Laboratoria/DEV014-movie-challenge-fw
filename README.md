@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# Catálogo de Películas - The Movie Database API V3 🎬
+¡Bienvenido al Catálogo de Películas! Este proyecto fue creado con dedicación para ofrecerte una experiencia única al explorar y descubrir películas. 🎥
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Definición del Producto
+El Catálogo de Películas es una plataforma donde podrás visualizar, filtrar y ordenar películas utilizando los datos proporcionados por The Movie Database API V3 🌟
 
-Currently, two official plugins are available:
+##  Funcionalidades Principales
+Explora Películas: Navega por un extenso catálogo de películas con información detallada sobre cada una. 📚
+Filtra Películas: Encuentra películas según género, año de lanzamiento, calificación y más. 🔍
+Ordena Películas: Ordena las películas por popularidad, fecha de lanzamiento y otros criterios. 🗂️
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características Técnicas
+SPA con Múltiples Vistas: Arquitectura de una sola página (SPA) que ofrece una experiencia de usuario dinámica y fluida. 🖥️
+Sistema de Enrutamiento: Navegación intuitiva dentro de la aplicación gracias a un sistema de enrutamiento integrado. 🛣️
+Carga Dinámica: Las vistas de la aplicación se cargan dinámicamente mediante JavaScript, asegurando una experiencia rápida y eficiente. 🚀
+Actualización de URL y Título: La URL y el título del documento se actualizan automáticamente según la vista cargada, proporcionando una navegación coherente. 🔄
+Carga Inicial de Vista: La aplicación carga automáticamente la vista correspondiente a la URL actual al iniciar, para una exploración sin problemas. 🎉
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
