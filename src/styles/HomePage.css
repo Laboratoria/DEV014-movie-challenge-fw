@@ -1,0 +1,37 @@
+.container-movie-card {
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+  justify-content: space-between;
+  
+}
+
+.movie-card-image {
+    width: 140px; /* Ancho completo del póster */
+  height: 200px; /* Altura automática para mantener la proporción */
+  margin-left: 30px;
+  margin-bottom: -6px;
+
+}
+
+.container-card-image {
+  background-color: rgba(255, 252, 252, 0.453);
+border-radius: 10px;
+width: 200px;
+}
+
+.text-card{
+align-items: center;
+justify-content: center;
+}
+
+.text-title {
+  font-size: medium;
+  color: beige;
+}
+
+.text-card-year {
+  font-size: small;
+  opacity: 0.5;
+}
+
