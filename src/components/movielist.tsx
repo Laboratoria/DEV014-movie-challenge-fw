@@ -1,48 +1,19 @@
-/* src/components/MovieList.tsx
+import Movie from "../models/Movie";
+import MovieCard from "./MovieCard";
 
-import React, { useEffect, useState } from 'react';
-import Movie from '../models/Movie';
+interface MovieListProps {
+movies: Movie[]
+}
 
-//React.FC funcional componente
-const MovieList: React.FC = () => {
-  //movies array objeto de Movie, movies es el valor actual del estado.
-  // setMovies es la función para actualizar este estado.
-  //permite agregar estado local a componentes funcionales.
-  //<Movie[]> especifica que el estado será un array de objetos Movie.
-  //[]carguen los datos de las películas, movies
-
-  //variables cambian de estado
-  //setMovies modifica la variable movies
-  //movies cambia, porque va a buscar a fuera la informacion
-  //funciones reactivas
-  //const [movies, setMovies] = useState<Movie[]>([]);
-
-
-  //detecta cambios
-  useEffect(() => {
-
-
-      //cuando no hay dependencias, se ejecutara una sola vez en el inicio
-  }, []);
-
-  //ejecuta funcion
-  //
+const MovieList: React.FC<MovieListProps> = ({ movies }) => {
 
   return (
-    <div>
-      <h1>Movie List</h1>
-      <ul>
-        {movies.map(movie => (
-          <li key={movie.id}>
-            <h2>{movie.original_title}</h2>
-            <p>{movie.overview}</p>
-            <img src={movie.poster_path} alt={movie.original_title} />
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul  className="container-list-movie">
+      {movies.map((movie) => (
+        <MovieCard key={movie.id} movie={movie}/>
+      ))}
+    </ul>
   );
 };
 
 export default MovieList;
-*/

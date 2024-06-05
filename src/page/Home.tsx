@@ -2,10 +2,10 @@
 //define peliculas y pasa a componentes.
 
 import React, { useEffect, useState } from "react";
-import '../styles/HomePage.css' 
+import "../styles/HomePage.css";
 import { getMovies } from "../services/APIService";
 import Movie from "../models/Movie";
-import MovieCard from "../components/MovieCard";
+import MovieList from "../components/MovieList";
 
 //app es un componente de tipo funcion de reactx
 const Home: React.FC = () => {
@@ -19,11 +19,8 @@ const Home: React.FC = () => {
   return (
     <div>
       <h1>Cinema Paraíso</h1>
-      <ul>
-        {movies.map((movie) => (
-          <MovieCard movie={movie} />
-        ))}
-      </ul>
+   {/* {movies} son las peliculas */}
+      <MovieList movies={movies}/>
     </div>
   );
 };

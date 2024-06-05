@@ -16,7 +16,7 @@ const mockData = {
       genre_ids: [878, 12, 28],
       id: 653346,
       original_language: "en",
-      original_title: "Kingdom of the Planet of the Apes",
+      original_title: "Kingdom of the Planet",
       overview:
         "Several generations in the future following Caesar's reign, apes are now the dominant species and live harmoniously while humans have been reduced to living in the shadows. As a new tyrannical ape leader builds his empire, one young ape undertakes a harrowing journey that will cause him to question all that he has known about the past and to make choices that will define a future for apes and humans alike.",
       popularity: 10276.252,
@@ -50,7 +50,7 @@ const mockData = {
       genre_ids: [878, 28, 12],
       id: 823464,
       original_language: "en",
-      original_title: "Godzilla x Kong: The New Empire",
+      original_title: "Godzilla x Kong",
       overview:
         "Following their explosive showdown, Godzilla and Kong must reunite against a colossal undiscovered threat hidden within our world, challenging their very existence – and our own.",
       popularity: 3365.201,

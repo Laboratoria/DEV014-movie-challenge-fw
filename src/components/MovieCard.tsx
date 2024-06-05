@@ -9,18 +9,15 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   const fullImageUrl = `${base_url}${movie.poster_path}`;
 
   return (
-    <div className="container-movie-card">
-      <div className='container-card-image'>
-      <img src={fullImageUrl} className='movie-card-image'/>
+    <li className="none-style-li">
+      <div className="container-card-image">
+        <img src={fullImageUrl} className="movie-card-image" />
       </div>
-      <div className="text-card">
-      <span className="text-title">
-        {movie.original_title} 
-      </span>
-      <p className="text-card-year">{movie.release_date}</p>
+      <div className="text-card-movie">
+        <p className="text-title">{movie.original_title}</p>
+        <p className="text-card-year">{movie.release_date}</p>
       </div>
-    </div>
-    
+    </li>
   );
 };
 
