@@ -1,8 +1,8 @@
-# Catálogo de Películas - The Movie Database API V3 🎬
-¡Bienvenid@s al Catálogo de Películas! Este proyecto fue creado con dedicación para ofrecerte una experiencia única al explorar y descubrir películas. 🎥
+# Movie Database API V3 🎬
+¡Bienvenid@s a Movie Challenge ! Este proyecto fue creado con dedicación para ofrecerte una experiencia única al explorar y descubrir películas. 🎥
 
 ## Definición del Producto
-El Catálogo de Películas es una plataforma donde podrás visualizar, filtrar y ordenar películas utilizando los datos proporcionados por The Movie Database API V3 🌟
+Movie Challenge es una plataforma donde podrás visualizar, filtrar y ordenar películas utilizando los datos proporcionados por The Movie Database API V3 🌟
 
 ##  Funcionalidades Principales
 Explora Películas: Navega por un extenso catálogo de películas con información detallada sobre cada una. 📚
