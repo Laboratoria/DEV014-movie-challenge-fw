@@ -1,0 +1,21 @@
+.currentPage{
+    background-color: transparent;
+    color: aliceblue;
+}
+button {
+    background-color: #EAB108;
+    height: 40px;
+    min-width: 50px;
+    font-size: large;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    border: none;
+    margin: 4px;
+}
+.containerButton{
+ display: flex;
+ width: 100%;
+ justify-content: center;
+ margin-bottom: 50px;
+}

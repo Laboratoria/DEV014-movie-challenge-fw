@@ -1,0 +1,30 @@
+.movieClassContainer{
+    width: 200px;
+    text-align: center;
+}
+img{
+    height: 200px;
+    box-shadow: 0px 4px 8px #191919;
+}
+.tittleName{
+    font-size: large;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.pName{
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.pGenre{
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 11px;
+    width: 100%;
+}
+.pGenre{
+    display: flex;
+    justify-content: center;
+}
