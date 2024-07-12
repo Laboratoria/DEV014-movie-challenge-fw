@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+.movie-detail {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+
+  .movie-detail-wallpaper-image {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+  .movie-detail-information {
+    display: flex;
+    padding: 200px 200px;
+    color: white;
+
+    .movie-detail-information-container {
+      padding-right: 200px;
+
+      h1 {
+        margin: 0px;
+        font-size: 60px;
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: normal;
+      }
+
+      ul {
+        display: flex;
+        list-style: none;
+        padding: 0px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+
+        .movie-detail-genre {
+          font-size: 14px;
+          background-color: rgba(107, 129, 144, 0.6);
+          min-width: 100px;
+          padding: 15px;
+          text-align: center;
+          border-radius: 30px;
+          margin: 0px 10px;
+        }
+      }
+    }
+
+    .movie-detail-poster-container {
+      .movie-detail-poster {
+        width: 400px;
+        height: 500px;
+      }
+    }
+  }
+}

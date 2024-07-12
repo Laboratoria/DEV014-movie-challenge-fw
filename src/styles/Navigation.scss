@@ -1,0 +1,51 @@
+.navigation-container {
+  display: flex;
+  justify-content: center;
+  background-color: #08192b;
+  width: 60%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 30px;
+
+  .filter {
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+
+    select {
+      color: rgb(107, 129, 144);
+      background: none;
+      border: none;
+      font-size: 18px;
+      width: 150px;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      background: none;
+      border: 1px solid rgb(107, 129, 144);
+      color: rgb(107, 129, 144);
+      cursor: pointer;
+      padding: 5px 10px;
+      margin-left: 5px;
+      border-radius: 10px;
+      transition: background-color 0.5s ease;
+      transition: color 0.5s ease;
+
+      &:hover:not(:disabled) {
+        background-color: rgb(107, 129, 144);
+        color: #08192b;
+      }
+
+      &:disabled {
+        visibility: hidden;
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.movie {
+  width: 200px;
+  height: 310px;
+  margin: 20px 10px;
+  cursor: pointer;
+
+  .movie-poster {
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+  }
+
+  .movie-information {
+    display: flex;
+    flex-wrap: wrap;
+    color: #c3d2ec;
+
+    .movie-title-container {
+      width: 100%;
+
+      .movie-title {
+        font-size: 18px;
+        margin: auto;
+        margin-top: 15px;
+      }
+    }
+
+    .movie-information-container {
+      width: 100%;
+
+      .movie-release-year {
+        margin: auto;
+      }
+    }
+  }
+}

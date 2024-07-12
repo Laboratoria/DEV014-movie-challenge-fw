@@ -1,0 +1,32 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    list-style: none;
+
+    li {
+      margin: 0px 5px;
+
+      button {
+        cursor: pointer;
+        min-width: 30px;
+        height: 30px;
+        background-color: #08192b;
+        color: #fff;
+        border: none;
+        transition: all 0.5s ease;
+
+        &.active {
+          background-color: #fff;
+          color: #08192b;
+        }
+
+        &:hover:not(.active) {
+          background-color: rgba(24, 52, 90, 0.5);
+        }
+      }
+    }
+  }
+}
