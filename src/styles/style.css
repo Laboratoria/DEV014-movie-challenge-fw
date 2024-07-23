@@ -1,0 +1,26 @@
+:root {
+    --bodyColor: #050E2F; 
+    --color-boton: #eb2d3d;
+}
+
+body {
+    background-color: black !important;
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 50vh; /* Altura completa de la ventana */
+}
+
+.large-spinner {
+    width: 500px;  /* Ancho del Spinner */
+    height: 500px; /* Alto del Spinner */
+}
+
+
+
+

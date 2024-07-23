@@ -1,0 +1,20 @@
+select{
+    background-color: #EB7D2D;
+    color: white;
+    font-weight: 600;
+    border-radius: .3rem;
+    font-size: .8rem;
+}
+.orderby{
+    padding: 0px 10px;
+}
+@media (min-width: 768px) {
+    select{
+        font-size: 1rem;
+        padding: .7rem 2rem;
+    }
+
+    .orderby{
+        padding: .7rem 3rem;
+    }
+}

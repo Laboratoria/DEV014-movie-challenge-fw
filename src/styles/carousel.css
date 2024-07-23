@@ -1,0 +1,23 @@
+.carousel-item {
+    width: 100%;
+    height: 100px; /* Altura del item del carousel */
+    background-size: cover;
+    background-position:center; 
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Color de texto opcional si quieres añadir superposiciones */
+    text-align: center; /* Alinea el contenido al centro si es necesario */
+  }
+
+  @media (min-width: 768px){
+    .carousel-item{
+        height: 200px;
+    }
+  }
+  @media (min-width: 920px){
+    .carousel-item{
+        height: 300px;
+    }
+  }
